@@ -52,9 +52,3 @@ console.log(typeof v)        // -- symbol
 // Empty vlaues :  nothing to do with undefined
 let pot = ""   // string 
 console.log(pot)
-
-
-
-
-
-// All JavaScript comparison operators (like ==, !=, <, >) return true or false from the comparison.
