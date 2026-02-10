@@ -1,0 +1,12 @@
+function wait(ms){
+    return new Promise((resolve)=>{
+        setTimeout(()=>{
+            resolve(console.log(`${ms/1000} seconds passed`));
+        },ms)
+    })
+}
+
+
+wait(2000)
+wait(1000)
+wait(5000)
