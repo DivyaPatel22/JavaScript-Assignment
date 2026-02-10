@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="secret-message">Initial Text</p> 
+    <button onclick="change()">Click me</button>
+
+    <script>
+        function change(){
+            document.getElementById('secret-message').innerHTML = "You found the secret message!";
+        }
+    </script>
+</body>
+</html>

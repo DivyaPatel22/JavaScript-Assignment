@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <div class="box" style="background-color: black; color: aliceblue;">
+        <p>Element-1</p>
+     </div>
+     <div class="box" style="background-color: black; color: aliceblue;">
+        <p>Element-2</p>
+     </div>
+     <div class="box" style="background-color: black; color: aliceblue;">
+        <p>Element-3</p>
+     </div>
+
+     <script>
+           let box = document.querySelectorAll("div.box")
+        //    box[0].style.backgroundColor = "lightblue";
+        //    box[1].style.backgroundColor = "lightblue";
+        //    box[2].style.backgroundColor = "lightblue";
+
+        // for(let i =0 ; i < box.length ; i++){
+        //     box[i].style.backgroundColor = "lightblue";
+        // }
+
+        box.forEach((i) => {
+            i.style.backgroundColor = "lightblue";
+        });
+     </script>
+</body>
+</html>
