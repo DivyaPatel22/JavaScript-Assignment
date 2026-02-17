@@ -48,3 +48,82 @@ function gatData(){
     })
 }
 getData()
+
+
+// onclick button promise is resolved ! 
+
+const d = document.querySelector("#click")
+
+const p = new Promise((resolve,reject)=>{
+    d.addEventListener("click",()=>{       //onclick it will resolve the promise 
+        resolve("promise resolved");
+    })
+})
+
+
+//after resolving promise then method is called and print on console done :
+
+p.then(()=>{         // it will return promise 
+    console.log("Done");
+})
+
+
+// let's crete two button for resolving promise & rejecting promise
+
+const f = document.querySelector("#reject")
+
+const p1 = new Promise((resolve,reject)=>{
+    f.addEventListener("click",()=>{       //onclick it will reject the promise 
+        reject("promise rejected");
+    })
+})
+
+
+
+// // let's combine both of them :
+
+const pp = new Promise((resolve,reject)=>{
+    d.addEventListener("click",()=>{       //onclick it will resolve the promise 
+        resolve("promise resolved");
+    })
+
+    f.addEventListener("click",()=>{       //onclick it will reject the promise 
+        reject("promise rejected");
+    })
+})
+
+pp.then(()=>{
+    console.log("Done");
+})
+.catch(()=>{                                 // if rejected execute this
+    console.log("error");
+}) 
+.finally(()=>{                                // always executed if promise reject or resolved 
+    console.log("always executed");
+})
+
+
+//Example :
+
+let a = new Promise((resolve,reject)=>{
+    return resolve(15)
+})
+
+console.log(a);
+
+a.then((value)=>{
+    console.log(value);
+    return value *2
+})
+.then((value)=>{
+    console.log(value);
+})
+
+
+
+
+
+
+
+
+
