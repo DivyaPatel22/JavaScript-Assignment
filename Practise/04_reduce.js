@@ -28,6 +28,11 @@ const r3 = a3.reduce((acc,curr)=>{
 })
 console.log(r3);
 
+//Find the minimum number in an array.
+const r7 = a3.reduce((acc,cur)=> acc<cur?acc:cur)
+console.log(r7)
+
+
 
 // Count Total Characters
 // Find total number of characters in ["hi", "hello", "js"].
@@ -36,6 +41,14 @@ const r4 = a4.reduce((acc,curr)=>{
     return acc += curr.length
 },0)
 console.log(r4);
+
+
+//Count total number of elements (without using .length).
+const r8 = a3.reduce((acc,cur)=>{
+    return acc+=1
+},0)
+console.log(r8)
+
 
 
 // Flatten One-Level Array
@@ -52,7 +65,6 @@ console.log(r5);
 // Count Occurrences
 // Count how many times each element appears in:
 const a6 = ["apple", "banana", "apple", "orange", "banana", "apple"]
-let result = {}
 const r6 = a6.reduce((acc,cur)=>{
     if(acc[cur]){
       acc[cur]+=1
@@ -64,3 +76,41 @@ const r6 = a6.reduce((acc,cur)=>{
 },{})
 console.log(r6);
 
+// Convert array of numbers into an object
+// Example: [1,2,3] → {1:true, 2:true, 3:true}
+
+const arrr = [1,2,3]
+const r9 = arrr.reduce((acc,cur)=>{
+    acc[cur] = true
+    return acc
+},{})
+console.log(r9)
+
+
+// Count frequency of elements
+const arr1 = ["a","b","a","c","b","a"]
+const r10 = arr1.reduce((acc,cur)=>{
+    if(!acc[cur]){
+        acc[cur] = 1
+    }
+    else{
+       acc[cur] += 1 
+    }
+    return acc
+},{})
+console.log(r10)
+
+
+// Group numbers into even and odd
+// Output: { even: [], odd: [] }
+
+const r11 = a3.reduce((acc,cur)=>{
+    if(cur % 2 == 0){
+        acc["even"].push(cur)
+    }
+    else{
+        acc["odd"].push(cur)
+    }
+    return acc
+},{even : [] , odd : [] })
+console.log(r11)

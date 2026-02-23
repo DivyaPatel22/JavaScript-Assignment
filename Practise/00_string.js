@@ -68,4 +68,132 @@
 
 
 
+//String Based Questions (VERY COMMON)
+// These are frequently asked.
+
+// Reverse a string (without using .reverse())
+const str11 = "Hello"
+const r1 = str1.split("").reverse().join("")
+console.log(r1)
+
+// Check if a string is palindrome
+const str12 = "aba"
+function check_palin(str){
+    let start = 0
+    let end = str.length-1
+    while(start<=end){
+        if(str[start]!==str[end]){
+            return false
+        }
+        start++;
+        end--;
+    }
+    return true
+}
+console.log(check_palin(str2))
+console.log(check_palin(str1))
+
+// Find first non-repeating character
+function find(str){
+    let result = {}
+    for(let char of str){
+        result[char] = (result[char]||0)+1
+    }
+    for(let char of str){
+        if(result[char]===1){
+            return char
+        }
+        return false
+    }
+}
+console.log(find(str2))
+console.log(find(str1))
+
+// Count frequency of characters
+function count(str){
+    let result = {};
+    for(let c of str){
+        result[c] = (result[c]||0)+1;
+    }
+    return result
+}
+console.log(count(str1))
+console.log(count(str2))
+
+// Check if two strings are anagrams
+let str13 = "aba"
+let str14 = "baa"
+
+function check_Anagram(str1,str2){
+    let r1 = str1.toLowerCase().split("").sort().join("")
+    let r2 = str2.toLowerCase().split("").sort().join("")
+    
+    if(r1 === r2){
+        return true
+    }
+    return false
+}
+console.log(check_Anagram(str3,str4))
+console.log(check_Anagram(str1,str2))
+
+// Group anagrams
+const words = ['eat', 'tea', 'tan', 'ate', 'nat', 'bat', 'listen', 'silent'];
+function group(arr){
+    let result = {}
+    
+    for(let s of arr){
+        let s1 = s.split("").sort().join("")
+        
+        if(!result[s1]){
+            result[s1] = []
+        }
+        result[s1].push(s)
+    }
+    return Object.values(result)
+}
+console.log(group(words))
+
+// Longest substring without repeating characters
+// let str5 = "aaabbcc"
+// function sbr(str){
+//     let result = str[0]
+//     let start = 1
+//     for(let i of str){
+//         if(!result.includes(i)){
+//             result[start] = i
+//             start++
+//         }
+//     }
+//     return result
+// }
+// console.log(sbr(str5))
+
+
+// String compression (aaabbcc → a3b2c2) 
+function comp(str){
+    let result = {}
+    let ans = ""
+    for(let s of str){
+        result[s] = (result[s]||0)+1
+    }
+    for(let i in result){
+        ans += i+result[i]
+    }
+    return ans
+}
+console.log(comp(str5))
+
+
+// Reverse words in a sentence
+const str6 = "hello Chhota Bheem"
+function rev(str){
+    let result = str.split(" ")
+    let ans = []
+    for(let i of result){
+         ans.push(i.split("").reverse().join(""))
+    }
+    return ans.join(" ")
+}
+console.log(rev(str6))
+
 
