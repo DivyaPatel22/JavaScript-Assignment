@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button{
+            color:darkblue;
+            background-color: lightblue;
+            width: 100px;
+            height: 50px;
+            font-size: large;
+       }
+    </style>
+</head>
+<body>
+    <button class="button" id="btn" onclick="counter()">Click : 0</button>
+    <script>
+        let count = 0 ;
+        function counter(){
+            count++;
+            document.getElementById('btn').innerText= "Click : "+ count
+        }
+    </script>
+</body>
+</html>
