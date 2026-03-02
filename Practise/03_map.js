@@ -77,3 +77,19 @@ console.log(r9);
 
 
 
+
+// map → “Change it”
+// [1,2,3].map(x => x*2)
+// [2,4,6]
+
+// flat → “Flatten it”
+// [[2],[4],[6]].flat()
+// [2,4,6]
+
+// flatMap → “Change it and flatten it in one go”
+// [1,2,3].flatMap(x => [x, x*10])
+// [1,10,2,20,3,30]
+
+
+
+
